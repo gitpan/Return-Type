@@ -59,14 +59,17 @@ DESCRIPTION
        my $answer = first_item(42, 43, 44);     # returns 44
        my $pie    = first_item(3.141592);       # returns 3
 
+    The options `coerce_scalar` and `coerce_list` are also available if you
+    wish to enable coercion only in particular contexts.
+
   Power-user Inferface
     Rather than using the `:ReturnType` attribute, it's possible to wrap a
     coderef like this:
 
        my $wrapped = Return::Type->wrap_sub($orig, %options);
 
-    The accepted options are `scalar`, `list` and `coerce`, as per the
-    attribute-based interface.
+    The accepted options are `scalar`, `list`, `coerce`, `coerce_list`, and
+    `coerce_scalar`, as per the attribute-based interface.
 
 BUGS
     Please report any bugs to

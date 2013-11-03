@@ -26,7 +26,7 @@ optional_features: {}
 provides:
   Return::Type:
     file: lib/Return/Type.pm
-    version: 0.001
+    version: 0.002
 requires:
   Eval::TypeTiny: 0
   Scope::Upper: 0
@@ -41,4 +41,4 @@ resources:
   homepage: https://metacpan.org/release/Return-Type
   license: http://dev.perl.org/licenses/
   repository: https://github.com/tobyink/p5-return-type
-version: 0.001
+version: 0.002
