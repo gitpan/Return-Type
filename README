@@ -10,7 +10,7 @@ SYNOPSIS
           return $_[0];
        }
    
-       my $answer = first_item(42, 43, 44);     # returns 44
+       my $answer = first_item(42, 43, 44);     # returns 42
        my $pie    = first_item(3.141592);       # throws an error!
 
 DESCRIPTION
@@ -56,7 +56,7 @@ DESCRIPTION
           return $_[0];
        }
    
-       my $answer = first_item(42, 43, 44);     # returns 44
+       my $answer = first_item(42, 43, 44);     # returns 42
        my $pie    = first_item(3.141592);       # returns 3
 
     The options `coerce_scalar` and `coerce_list` are also available if you

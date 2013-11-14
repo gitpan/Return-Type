@@ -33,7 +33,7 @@ my $meta = {
                         test      => { requires => { "Test::Fatal" => 0, "Test::More" => 0.96 } },
                       },
   "provides"       => {
-                        "Return::Type" => { file => "lib/Return/Type.pm", version => 0.002 },
+                        "Return::Type" => { file => "lib/Return/Type.pm", version => 0.003 },
                       },
   "release_status" => "stable",
   "resources"      => {
@@ -43,7 +43,7 @@ my $meta = {
                         repository   => { type => "git", web => "https://github.com/tobyink/p5-return-type" },
                         X_identifier => "http://purl.org/NET/cpan-uri/dist/Return-Type/project",
                       },
-  "version"        => 0.002,
+  "version"        => 0.003,
 };
 
 my %dynamic_config;
