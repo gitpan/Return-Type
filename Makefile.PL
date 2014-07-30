@@ -5,9 +5,9 @@ my $EUMM = eval( $ExtUtils::MakeMaker::VERSION );
 
 my $meta = {
   "abstract"       => "specify a return type for a function (optionally with coercion)",
-  "author"         => ["Toby Inkster (TOBYINK) <tobyink\@cpan.org>"],
+  "author"         => ["Toby Inkster (TOBYINK) <tobyink\@cpan.org>", "unknown"],
   "dynamic_config" => 0,
-  "generated_by"   => "Dist::Inkt::Profile::TOBYINK version 0.013, CPAN::Meta::Converter version 2.120921",
+  "generated_by"   => "Dist::Inkt::Profile::TOBYINK version 0.016, CPAN::Meta::Converter version 2.140640",
   "keywords"       => [],
   "license"        => ["perl_5"],
   "meta-spec"      => {
@@ -21,29 +21,33 @@ my $meta = {
                         develop   => { recommends => { "Dist::Inkt" => 0.001 } },
                         runtime   => {
                                        requires => {
-                                         "Eval::TypeTiny"  => 0,
-                                         "perl"            => 5.008,
-                                         "Scope::Upper"    => 0,
-                                         "Sub::Identify"   => 0,
-                                         "Sub::Name"       => 0,
-                                         "Types::Standard" => 0,
-                                         "Types::TypeTiny" => 0,
-                                       },
+                                                     "Eval::TypeTiny" => 0,
+                                                     "perl" => 5.008,
+                                                     "Sub::Identify" => 0,
+                                                     "Sub::Name" => 0,
+                                                     "Types::Standard" => 0,
+                                                     "Types::TypeTiny" => 0,
+                                                   },
+                                       suggests => { "Scope::Upper" => 0 },
                                      },
                         test      => { requires => { "Test::Fatal" => 0, "Test::More" => 0.96 } },
                       },
   "provides"       => {
-                        "Return::Type" => { file => "lib/Return/Type.pm", version => 0.003 },
+                        "Return::Type" => { file => "lib/Return/Type.pm", version => 0.004 },
                       },
   "release_status" => "stable",
   "resources"      => {
                         bugtracker   => { web => "http://rt.cpan.org/Dist/Display.html?Queue=Return-Type" },
                         homepage     => "https://metacpan.org/release/Return-Type",
                         license      => ["http://dev.perl.org/licenses/"],
-                        repository   => { type => "git", web => "https://github.com/tobyink/p5-return-type" },
+                        repository   => {
+                                          type => "git",
+                                          url  => "git://github.com/tobyink/p5-return-type.git",
+                                          web  => "https://github.com/tobyink/p5-return-type",
+                                        },
                         X_identifier => "http://purl.org/NET/cpan-uri/dist/Return-Type/project",
                       },
-  "version"        => 0.003,
+  "version"        => 0.004,
 };
 
 my %dynamic_config;
@@ -55,6 +59,7 @@ my %WriteMakefileArgs = (
 	VERSION    => $meta->{version},
 	EXE_FILES  => [ map $_->{file}, values %{ $meta->{x_provides_scripts} || {} } ],
 	NAME       => do { my $n = $meta->{name}; $n =~ s/-/::/g; $n },
+	test       => { TESTS => "t/*.t" },
 	%dynamic_config,
 );
 
