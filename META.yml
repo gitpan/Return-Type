@@ -2,7 +2,6 @@
 abstract: 'specify a return type for a function (optionally with coercion)'
 author:
   - 'Toby Inkster (TOBYINK) <tobyink@cpan.org>'
-  - unknown
 build_requires:
   Test::Fatal: '0'
   Test::More: '0.96'
@@ -27,11 +26,10 @@ optional_features: {}
 provides:
   Return::Type:
     file: lib/Return/Type.pm
-    version: '0.004'
+    version: '0.005'
 requires:
   Eval::TypeTiny: '0'
-  Sub::Identify: '0'
-  Sub::Name: '0'
+  Sub::Util: '0'
   Types::Standard: '0'
   Types::TypeTiny: '0'
   perl: '5.008'
@@ -41,4 +39,4 @@ resources:
   homepage: https://metacpan.org/release/Return-Type
   license: http://dev.perl.org/licenses/
   repository: git://github.com/tobyink/p5-return-type.git
-version: '0.004'
+version: '0.005'

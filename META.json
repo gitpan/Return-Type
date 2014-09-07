@@ -1,8 +1,7 @@
 {
    "abstract" : "specify a return type for a function (optionally with coercion)",
    "author" : [
-      "Toby Inkster (TOBYINK) <tobyink@cpan.org>",
-      ""
+      "Toby Inkster (TOBYINK) <tobyink@cpan.org>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Dist::Inkt::Profile::TOBYINK version 0.016, CPAN::Meta::Converter version 2.140640",
@@ -39,8 +38,7 @@
       "runtime" : {
          "requires" : {
             "Eval::TypeTiny" : "0",
-            "Sub::Identify" : "0",
-            "Sub::Name" : "0",
+            "Sub::Util" : "0",
             "Types::Standard" : "0",
             "Types::TypeTiny" : "0",
             "perl" : "5.008"
@@ -59,7 +57,7 @@
    "provides" : {
       "Return::Type" : {
          "file" : "lib/Return/Type.pm",
-         "version" : "0.004"
+         "version" : "0.005"
       }
    },
    "release_status" : "stable",
@@ -78,5 +76,5 @@
          "web" : "https://github.com/tobyink/p5-return-type"
       }
    },
-   "version" : "0.004"
+   "version" : "0.005"
 }

@@ -5,7 +5,7 @@ my $EUMM = eval( $ExtUtils::MakeMaker::VERSION );
 
 my $meta = {
   "abstract"       => "specify a return type for a function (optionally with coercion)",
-  "author"         => ["Toby Inkster (TOBYINK) <tobyink\@cpan.org>", "unknown"],
+  "author"         => ["Toby Inkster (TOBYINK) <tobyink\@cpan.org>"],
   "dynamic_config" => 0,
   "generated_by"   => "Dist::Inkt::Profile::TOBYINK version 0.016, CPAN::Meta::Converter version 2.140640",
   "keywords"       => [],
@@ -23,8 +23,7 @@ my $meta = {
                                        requires => {
                                                      "Eval::TypeTiny" => 0,
                                                      "perl" => 5.008,
-                                                     "Sub::Identify" => 0,
-                                                     "Sub::Name" => 0,
+                                                     "Sub::Util" => 0,
                                                      "Types::Standard" => 0,
                                                      "Types::TypeTiny" => 0,
                                                    },
@@ -33,7 +32,7 @@ my $meta = {
                         test      => { requires => { "Test::Fatal" => 0, "Test::More" => 0.96 } },
                       },
   "provides"       => {
-                        "Return::Type" => { file => "lib/Return/Type.pm", version => 0.004 },
+                        "Return::Type" => { file => "lib/Return/Type.pm", version => 0.005 },
                       },
   "release_status" => "stable",
   "resources"      => {
@@ -47,7 +46,7 @@ my $meta = {
                                         },
                         X_identifier => "http://purl.org/NET/cpan-uri/dist/Return-Type/project",
                       },
-  "version"        => 0.004,
+  "version"        => 0.005,
 };
 
 my %dynamic_config;

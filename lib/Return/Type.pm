@@ -5,12 +5,11 @@ use warnings;
 package Return::Type;
 
 our $AUTHORITY = 'cpan:TOBYINK';
-our $VERSION   = '0.004';
+our $VERSION   = '0.005';
 
 use Attribute::Handlers;
 use Eval::TypeTiny qw( eval_closure );
-use Sub::Identify qw( sub_fullname );
-use Sub::Name qw( subname );
+use Sub::Util qw( subname set_subname );
 use Types::Standard qw( Any ArrayRef HashRef Int );
 use Types::TypeTiny qw( to_TypeTiny );
 
@@ -103,7 +102,7 @@ sub wrap_sub
 		source       => \@src,
 		environment  => \%env,
 	);
-	return subname(sub_fullname($sub), $rv);
+	return set_subname(subname($sub), $rv);
 }
 
 sub UNIVERSAL::ReturnType :ATTR(CODE)
@@ -233,7 +232,7 @@ Toby Inkster E<lt>tobyink@cpan.orgE<gt>.
 
 =head1 COPYRIGHT AND LICENCE
 
-This software is copyright (c) 2013 by Toby Inkster.
+This software is copyright (c) 2013-2014 by Toby Inkster.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
